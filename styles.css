@@ -1,0 +1,453 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #030303;
+    color:#f4f2f2
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px;
+    color: #f4f2f2;
+    
+}
+
+nav button {
+    margin-left: 15px;
+    padding: 10px;
+    border: none;
+    background-color: #530a53;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+nav button:hover {
+    background-color: #580966;
+}
+
+.empresa-info {
+    
+    justify-content: space-between;
+    color: #f4f2f2;
+    margin-top: 20px;
+    font-size: 25px;
+    
+    
+}
+
+.empresa-info img {
+    width: 100%;
+    max-width: 800px;
+    margin-left: 600px;
+    margin-top: -1050px; 
+   
+}
+
+.Descricao {
+   
+    font-size: 20px;
+}
+
+.pergunta {
+   
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 500px;
+    font-size: 20px;
+}
+
+.logo{
+    color: #e3149e;
+    font-size: 16px;
+}
+
+.config-icon{
+   font-size: 20px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botoes button {
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #5b1469;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.botoes button:hover {
+    background-color: #46083d;
+    justify-items: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+    color: #000;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.social-login button {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    background-color: #550754;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    justify-content: center;
+}
+
+.social-login button:hover {
+    background-color: #550754;
+}
+
+.perfil {
+    
+    padding: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.perfil-opcoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.perfil-quadro {
+    background-color: #4f0543;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin-right: 10px;
+}
+
+.perfil-quadro:last-child {
+    margin-right: 0;
+}
+
+.empresa{
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #f4f2f2;
+}
+
+.empresa-info p,
+.empresa-info button {
+    margin: 0;
+    padding: 10px;
+    border: none;
+    
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+
+   
+}
+
+.empresa-info button:hover {
+    background-color: #4f0543;
+}
+
+
+.quadrado{
+    background-color: rgb(141, 4, 111);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    color: #f4f2f2;
+}
+
+
+/* quero ajuda */
+
+nav button {
+    margin-left: 15px;
+}
+
+.indicacoes {
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color:white ;
+    color: #000000;
+    flex: 0 0 700px; /* Define a largura do formulário */
+    margin-top: 50px;
+    
+}
+
+.indicacoes .campo {
+    flex: 1 1 45%; 
+    margin-right: 10px; 
+    margin-bottom: 15px; 
+}
+
+.indicacoes .campo:last-child {
+    margin-right: 0; 
+}
+
+.indicacoes h4 {
+    margin-bottom: 15px;
+   
+}
+
+
+.indicacoes label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.indicacoes input, .indicacoes select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.indicacoes .campo.wide {
+    flex: 1 1 100%; 
+}
+
+.lideranca-opcoes {
+    display: flex; /* Alinha os itens em linha */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 10px; /* Espaço entre as opções */
+    margin-top: 10px; /* Espaço acima das opções */
+}
+
+.lideranca-opcoes input[type="radio"] {
+    appearance: none; /* Remove o estilo padrão */
+    width: 10px; /* Tamanho do quadrado */
+    height: 10px; /* Tamanho do quadrado */
+    border: 2px solid #000; /* Borda do quadrado */
+    border-radius: 0; /* Remove borda arredondada */
+    margin-right: 5px; /* Espaço entre o quadrado e o texto */
+    cursor: pointer; /* Muda o cursor para pointer */
+}
+
+.lideranca-opcoes input[type="radio"]:checked {
+    background-color: #000; /* Cor de fundo quando selecionado */
+}
+
+.campo {
+    display: flex;
+    flex-direction: column; /* Mantém as labels e inputs alinhados em coluna */
+    margin-bottom: 15px; /* Espaço abaixo de cada campo */
+}
+
+
+.experiencia-container {
+    display: flex; /* Alinha os itens em linha */
+    justify-content: space-between; /* Espaça os itens */
+    margin-bottom: 20px; /* Espaço abaixo do contêiner */
+}
+
+.experiencia-texto {
+    margin-right: 20px; /* Espaço entre o texto e o formulário */
+    flex: 1; /* Permite que o texto ocupe espaço disponível */
+    margin-top: 40px;
+}
+
+button {
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #930a8a; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border-radius: 25px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para mudança de cor */
+}
+
+button:hover {
+    background-color: #460451; /* Cor ao passar o mouse */
+}
+
+/*para empresas */
+
+.negocio{
+    margin-top: 40px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.content-left, .content-right {
+    width: 48%;
+}
+
+.card {
+    background-color: #e5dddd;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #000;
+    margin-bottom: 2px;
+}
+
+.card a {
+    color: #930ba0;
+    text-decoration: none;
+    display: block;
+   margin-top: 20px;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+   
+    margin-top: 10px; /* Reduz a margem superior */
+}
+
+.icon {
+    
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1 1 30%; /* Ajuste conforme necessário */
+    text-align: center;
+}
+
+.content-right p {
+    margin-bottom: 20px;
+}
+
+
+/*IA*/
+
+
+.new-section {
+    margin-top: 20px;
+    background-color: #460451;
+    padding: 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.logo-section img {
+    max-width: 100px;
+}
+
+.logo-section div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+    text-align: center; 
+}
+
+.logo-section p {
+    margin: 0;
+}
+
+.ia-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 650px;
+    justify-content: center;
+}
+
+.ia-logo img {
+    max-width: 50px;
+    margin-right: 650px;
+    
+    
+}
+
+.IA{
+    margin-right: 650px;
+}
+
+.questions-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza a seção */
+    
+   
+}
+
+.question-card {
+    flex: 1 1 34%;
+    background-color: #a751b6;
+    padding: 20px;
+    border-radius: 10px;
+    
+
+}
+
+.search-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-section input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #b81ea8;
+}

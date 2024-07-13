@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio TIM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">IA HER</div>
+        <nav>
+            <button onclick="location.href='#comoFunciona '">Como Funciona</button></a>
+            <button onclick="location.href='#quero-ajudar '">Quero Ajudar</button>
+            <button onclick="location.href='#paraempresas '">Para empresas</button>
+            <button onclick="openLoginModal()">Entrar</button>
+        </nav>
+    </header>
+    <main>
+        <section class="empresa-info">
+            <h1>IA HER</h1>
+            <h2>Faça a diferença<br>
+                no mundo coorporativo</h2>
+            <p class="Descricão">SOMOS UM GRUPO DE MULHERES<br> PARA TE AJUDAR A ALCANÇAR A VAGA<br> QUE VOCÊ ALMEJA. O QUE OUTRAS<br> PROFISSIONAIS DA SUA ÁREA FIZERAM<br> PARA CHEGAR ATÉ LÁ? AQUI NÓS REUNIMOS<br> TODOS OS INSIGTHS E RETORNAMOS<br> AS DICAS MAIS VALIOSAS PARA VOCÊ.<br> QUAL PROJETO FAZER, QUAIS EVENTOS IR,<br> QUAIS CURSOS E CONHECIMENTOS INVESTIR.<br> TUDO EM UM SÓ LUGAR<br> EM PROL DA INCLUSÃO DE MULHERES<br> NA TECNOLOGIA E SUA CAPACITAÇÃO. </p>
+            <img src="menina.jpeg" alt="Imagem ilustrativa">
+        </section>
+        
+        <section class="pergunta">
+            <h3>O que você procura?</h3>
+            <div class="botoes">
+                <button>Cargos</button>
+                <button>Networking</button>
+                <button>Cursos</button>
+                <button>Recomendações</button>
+               
+            </div>
+        </section>
+    </main>
+<section id="comoFunciona">
+    <div id="comoFunciona" class="quadrado">
+        <h2>Como Funciona</h2>
+        <p>
+            Nossa plataforma vai funcionar da seguinte forma: a mulher que deseja uma vaga, seja profissional ou de liderança, irá fazer o cadastro no site e responder algumas perguntas. Como resposta, nossa IA vai trazer cursos, workshops, soft skills a serem trabalhadas, entre outras coisas. Todas essas informações serão tiradas do nosso banco de dados, onde as mulheres que já ocupam esses cargos irão nos ajudar preenchendo essas informações.
+        </p>
+    </div>
+</section>
+    
+<!-- login-->
+ <section id="login">
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Entrar</h2>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <label for="emailLogin">Email:</label>
+                <input type="email" id="emailLogin" required>
+                <label for="senhaLogin">Senha:</label>
+                <input type="password" id="senhaLogin" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="social-login">
+                <button onclick="loginWithGoogle()">Entrar com Google</button>
+                <button onclick="loginWithGithub()">Entrar com GitHub</button>
+            </div>
+            <p>Ainda não tem uma conta? <button onclick="openSignupModal()">Criar conta</button></p>
+        </div>
+    </div>
+</section>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignupModal()">&times;</span>
+            <h2>Criar Conta</h2>
+            <form id="signupForm" onsubmit="handleSignup(event)">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" required>
+                <label for="genero">Gênero:</label>
+                <select id="genero" required>
+                    <option value="">Selecione</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="outro">Outro</option>
+                </select>
+                <label for="emailSignup">Email:</label>
+                <input type="email" id="emailSignup" required>
+                <label for="senhaSignup">Senha:</label>
+                <input type="password" id="senhaSignup" required>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" required>
+                <label for="localizacao">Onde você está:</label>
+                <input type="text" id="localizacao" required>
+                <label for="areaAtuacao">Área de Atuação:</label>
+                <input type="text" id="areaAtuacao" required>
+                <label for="oQuePretendeAprender">O que pretende aprender:</label>
+                <input type="text" id="oQuePretendeAprender" required>
+                <label for="linkedin">LinkedIn:</label>
+                <input type="url" id="linkedin" required>
+                <label for="github">GitHub:</label>
+                <input type="url" id="github" required>
+                <button type="submit">Criar Conta</button>
+                <button onclick="location.href='#login'">Fazer login</button>
+
+            </form>
+        </div>
+    </div>
+
+    <section class="perfil">
+        <h3>EM QUAL PERFIL VOCÊ SE ENQUADRA HOJE?</h3>
+        <div class="perfil-opcoes">
+            <div class="perfil-quadro">
+                <h4>QUERO COLABORAR COM MINHA EXPERIÊNCIA</h4>
+                <p>Compartilhe conosco sua jornada. Quais soft skills você acha mais relevante, quais habilidades e cursos você deve desenvolver, quais projetos deve montar, as maiores dificuldades e todas as dicas que você tem para compartilhar.</p>
+            </div>
+            <div class="perfil-quadro">
+                <h4>GOSTARIA DE RECEBER O AUXÍLIO DAS MULHERES E DA INTELIGÊNCIA ARTIFICIAL</h4>
+                <p>Já se perguntou porque as mulheres sempre estão em menor número no mercado de TI? Nós respondemos isso! E trazemos para você as melhores dicas do que fazer para alcançar sua tão sonhada vaga. Tudo isso baseado em dados e recomendações reais de nossas amigas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="empresa">
+        <div class="perfil-quadro">
+            <h4>EMPRESA</h4>
+            <p>Gostaria de divulgar aqui seu evento ou vaga de emprego e atrair o maior número de profissionais? Está no local certo, pois este é nosso ponto de encontro para unir e contribuir com a formação dos maiores talentos do mercado. Lembrando que seu evento será divulgado, avaliado e recomendado por nossos membros.</p>
+        </div>
+        <div class="empresa-info">
+            <p><a href="#IA">CLIQUE AQUI </a>PARA INICIAR O CHAT COM NOSSA AI</p>
+            
+            <p>Reunindo dados e trazendo até você as maiores dicas do ano para alcançar seu tão almejado cargo</p>
+            <div class="logo">Logo IA</div>
+        </div>
+    </section>
+
+<!-- quero ajudar-->
+    <section id="quero-ajudar">
+    <main>
+        <div class="experiencia-container">
+        <div class="experiencia-texto">
+        <h2>COMPARTILHE SUA EXPERIÊNCIA NO MERCADO</h2>
+        <h3>COLABORE COM NOSSO BANCO DE DADOS,<br> DEIXE AQUI SUA TRAJETÓRIA PROFISSIONAL<br> E FALE SOBRE COMO ALCANÇOU <br>AS MELHORES OPORTUNIDADES NO TI.<br> 
+            VOCÊ TRABALHA PARA EMPRESA NACIONAIS<br> OU INTERNACIONAIS, QUAIS SÃO AS MELHORES<br>SOFTSKILLS, O QUE VOCÊ TEM A COMPARTILHAR?<br>
+            QUEREMOS FILTRAR AS MELHORES DICAS<br> PARA NOSSOS USUÁRIOS. 
+            TRAZEMOS VISIBILIDADE<br> A VOCÊ E TE APROXIMAMOS DOS MAIORES <br>RECRUTADORES. </h3>
+        </div>
+
+        <div class="indicacoes">
+            <h4>FAÇA INDICAÇÕES</h4>
+            <form>
+                <div class="campo">
+                    <label for="cargoAtual">Qual seu cargo atual?</label>
+                    <input type="text" id="cargoAtual" required>
+                </div>
+        
+                <div class="campo">
+                    <label for="empresa">Qual sua empresa?</label>
+                    <input type="text" id="empresa" required>
+                </div>
+        
+                <div class="campo">
+                    <label>Você assume alguma posição de liderança na sua empresa?</label>
+                    <div class="lideranca-opcoes">
+                        <input type="radio" id="liderancaSim" name="lideranca" value="sim">
+                        <label for="liderancaSim">Sim</label>
+                        
+                        <input type="radio" id="liderancaNao" name="lideranca" value="nao">
+                        <label for="liderancaNao">Não</label>
+                    </div>
+                </div>
+        
+                <div class="campo wide">
+                    <label for="qualLideranca">Qual?</label>
+                    <input type="text" id="qualLideranca">
+                </div>
+        
+                <div class="campo">
+                    <label for="modeloTrabalho">Qual modelo de trabalho?</label>
+                    <select id="modeloTrabalho">
+                        <option value="presencial">Presencial</option>
+                        <option value="hibrido">Híbrido</option>
+                        <option value="homeOffice">Home Office</option>
+                    </select>
+                </div>
+        
+                <div class="campo">
+                    <label for="recomendaCurso">Você recomenda algum curso para o cargo (x)?</label>
+                    <input type="text" id="recomendaCurso">
+                </div>
+        
+                <div class="campo">
+                    <label for="eventosOportunidades">Quais eventos/projetos lhe proporcionaram mais oportunidades?</label>
+                    <input type="text" id="eventosOportunidades">
+                </div>
+        
+                <div class="campo">
+                    <label for="recomendaNetworking">Você recomenda algum networking para o cargo (x)?</label>
+                    <input type="text" id="recomendaNetworking">
+                </div>
+        
+                <div class="campo">
+                    <label for="eventosNetworking">Quais eventos/projetos lhe proporcionaram mais oportunidades?</label>
+                    <input type="text" id="eventosNetworking">
+                </div>
+        
+                <div class="campo">
+                    <label for="softSkillsNecessarias">Quais soft skills são necessárias desenvolver?</label>
+                    <input type="text" id="softSkillsNecessarias">
+                </div>
+        
+                <div class="campo">
+                    <label for="workshopGrupo">Você participa de algum workshop ou grupo de apoio a mulheres na tecnologia? Se sim, quais?</label>
+                    <input type="text" id="workshopGrupo">
+                </div>
+        
+                <div class="campo wide">
+                    <label for="tragetoria">Deixe aqui sua trajetória profissional e outras indicações.</label>
+                    <input type="text" id="tragetoria">
+                </div>
+        
+                <div class="campo">
+                    <div class="lideranca-opcoes">
+                    <input type="radio" id="banco" name="banco" value="sim">
+                    <label for="banco">Você concorda em compartilhar suas informações para nosso banco de dados e garante que são 100% verdadeiras</label>
+                </div>
+            </div>
+        
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        </div>
+    </main>
+</section>
+
+<!--para empresas-->
+
+<section id="paraempresas">
+<main>
+    <h1 class="negocio">DIVULGUE SEU NEGÓCIO</h1>
+    <div class="container">
+        <div class="content-left">
+            <div class="card">
+                <p>Deseja divulgar seu evento ou vaga de emprego?<br>
+                Encontrar profissionais inspirados e contribuir com nosso grupo? Seu lugar é aqui.<br>
+                Cadastre sua empresa e faça parte do maior time de tecnologia</p>
+                <a href="#cadastro">Cadastre-se</a><br>
+                <p>Já tem conta? <a href="#login">Entrar</a></p>
+            
+            <div class="icons">
+                <div class="icon">eventos</div>
+                <div class="icon">Vagas</div>
+                <div class="icon">Cursos</div>
+                <div class="icon">Encontrar Profissionais</div>
+                <div class="icon">Reconhecer e contribuir com a plataforma</div>
+            </div>
+            </div>
+            <div class="card">
+                <p>ENTRE PARA O TIME DE EMPRESA PARCEIRAS</p>
+                <p>Nome de empresas</p>
+                
+            </div>
+        </div>
+
+        <div class="content-right">
+            <p>SUA EMPRESA PROMOVE ALGUM EVENTO DE TECNOLOGIA? NÓS DIVULGAMOS AQUI SEU EVENTO, CURSO OU VAGAS. ALÉM DISSO, NOSSO TIME PODERÁ TE AVALIAR E RECOMENDAR PARA AS PROFISSIONAIS DA CARREIRA.</p>
+            <p>ESTÁ EM BUSCA DE NOVOS TALENTOS? NÃO PERCA A CHANCE DE ATRAIR AS MELHORES PROFISSIONAIS DO MERCADO!<br>
+            FAÇA SEU CADASTRO E VISUALIZE OS MAIORES PERFIS.</p>
+        </div>
+    </div>
+</main>
+
+</section>
+
+<!--IA-->
+<section id="IA">
+<div class="new-section">
+    <div class="logo-section">
+        
+        <div class="ia-logo">
+            <img src="ia-logo.png" alt="Logo da IA">
+            <p >IA HER</p>
+        </div>
+    </div>
+    <div class="questions-section">
+        <div class="question-card">O que devo fazer para conseguir minha primeira vaga no mercado de TI?</div>
+        <div class="question-card">Por que há poucas mulheres em cargos de TI atualmente? E como podemos melhorar esse cenário?</div>
+        <div class="question-card">Como posso me destacar em uma vaga de TI no mercado internacional?</div>
+        <div class="question-card">Quais são as melhores indicações de curso e eventos de tecnologia para o cargo x?</div>
+        <div class="question-card">Quais projetos e habilidades devo desenvolver para chegar a posições de liderança?</div>
+    </div>
+    <div class="search-section">
+        <input type="text" placeholder="Qual a sua dúvida para alcançar as melhores oportunidades no TI?">
+    </div>
+</div>
+</main>
+</section>
+    <script src="script.js"></script>
+</body>
+</html>
